@@ -160,7 +160,7 @@ log-analyze-mcp/
 
 ## 路线图
 
-- [x] 支持 gzip/zip 压缩日志直接读取（v1.1.0）
+- [x] 支持 gzip/zip 压缩日志直接读取（v1.1.1）
 - [ ] 支持日志多格式自动解析（JSON Lines、自定义正则、logback 模板）
 - [ ] 错误时间线视图与跨文件关联分析
 - [ ] 支持 OpenAI 兼容接口（如内网 vLLM 部署）

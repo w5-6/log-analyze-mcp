@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "log-analyze-mcp"
-version = "1.1.0"
+version = "1.1.1"
 description = "基于 MCP 协议的本地日志智能分析服务，让 AI Agent 自动排查日志错误"
 readme = "README.md"
 requires-python = ">=3.10"

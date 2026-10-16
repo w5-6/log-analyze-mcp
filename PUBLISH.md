@@ -53,9 +53,9 @@ root-cause-analysis
 
 ## 4. Release Notes
 
-### Release v1.1.0 — Compressed logs support（当前版本）
+### Release v1.1.1 — Compressed logs support（当前版本）
 
-标题建议：`v1.1.0 - Read gzip/zip logs directly`
+标题建议：`v1.1.1 - Read gzip/zip logs directly`
 
 ```markdown
 ## What's New 🗜️
@@ -143,8 +143,8 @@ MIT licensed, tested against mcp 1.x and 2.x. Feedback welcome.
 - [ ] 仓库名与 About 描述已填写
 - [ ] 20 个 Topics 已添加
 - [ ] README 中的 `<your-name>` 已替换，badge 正常显示
-- [ ] 打 tag：`git tag v1.1.0 && git push origin v1.1.0`
-- [ ] GitHub Releases 发布 v1.0.0 与 v1.1.0
+- [ ] 打 tag：`git tag v1.1.1 && git push origin v1.1.1`
+- [ ] GitHub Releases 发布 v1.1.1（草稿→挂附件→发布）
 - [ ] 准备一张 1280×640 的 social preview（建议：终端 + 日志诊断报告的截图）
 - [ ] 首屏 README 放一张 30 秒演示 GIF（在 Cursor 中对话诊断日志的录屏）
 
