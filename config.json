@@ -1,0 +1,7 @@
+{
+  "ollama_base_url": "http://localhost:11434",
+  "ollama_model": "qwen2.5:7b",
+  "ollama_timeout": 120,
+  "max_log_lines": 400,
+  "log_extensions": [".log", ".txt", ".out", ".err", ".trace", ".gz", ".zip"]
+}

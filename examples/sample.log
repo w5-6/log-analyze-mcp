@@ -1,0 +1,29 @@
+2026-10-16 09:00:01 INFO  app.bootstrap - Starting order-service v2.3.1 on port 8080
+2026-10-16 09:00:01 INFO  app.bootstrap - Loading config from /etc/order/config.yaml
+2026-10-16 09:00:02 INFO  db.pool - HikariCP pool starting, maxPoolSize=20
+2026-10-16 09:00:03 INFO  db.pool - Connected to mysql://10.0.0.12:3306/orders
+2026-10-16 09:00:05 INFO  app.bootstrap - Started order-service in 4.2 seconds
+2026-10-16 09:01:12 INFO  http.access - GET /api/orders/10086 200 12ms
+2026-10-16 09:02:33 WARN  db.pool - HikariCP pool is 80% active (16/20 connections busy)
+2026-10-16 09:03:01 ERROR payment.client - POST https://pay.internal/api/charge failed: Connection refused: payment.internal:9100
+2026-10-16 09:03:01 ERROR payment.client - java.net.ConnectException: Connection refused
+    at java.net.PlainSocketImpl.socketConnect(Native Method)
+    at payment.client.ChargeClient.charge(ChargeClient.java:87)
+    at order.service.PaymentService.pay(PaymentService.java:142)
+2026-10-16 09:03:02 WARN  order.service - Retry payment for order 2001 (attempt 1/3)
+2026-10-16 09:03:05 ERROR payment.client - POST https://pay.internal/api/charge failed: Connection refused: payment.internal:9100
+2026-10-16 09:03:09 ERROR payment.client - POST https://pay.internal/api/charge failed: Connection refused: payment.internal:9100
+2026-10-16 09:03:09 ERROR order.service - Order 2001 payment failed after 3 retries
+2026-10-16 09:05:44 WARN  http.access - GET /api/orders/10090 upstream response time 5203ms
+2026-10-16 09:06:10 ERROR inventory.client - Inventory query timed out after 5000ms
+2026-10-16 09:06:10 ERROR inventory.client - java.net.SocketTimeoutException: Read timed out
+    at inventory.client.InventoryClient.query(InventoryClient.java:133)
+2026-10-16 09:10:00 INFO  http.access - GET /api/orders/10091 200 8ms
+2026-10-16 09:12:31 ERROR order.service - Failed to render order detail
+2026-10-16 09:12:31 ERROR order.service - java.lang.NullPointerException: Cannot invoke "Order.getCustomer().getName()" because "customer" is null
+    at order.web.OrderController.detail(OrderController.java:210)
+    at order.web.OrderController$$FastClassBySpringCGLIB.invoke(<generated>)
+2026-10-16 09:20:15 WARN  jvm.memory - Heap usage 92% (1843MB/2048MB), GC frequency rising
+2026-10-16 09:21:02 ERROR jvm.memory - java.lang.OutOfMemoryError: Java heap space
+Dumping heap to /var/log/order/heapdump.hprof ...
+2026-10-16 09:21:03 FATAL app.bootstrap - Service terminated due to unrecoverable error

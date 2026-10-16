@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "log-analyze-mcp"
+version = "1.1.0"
+description = "基于 MCP 协议的本地日志智能分析服务，让 AI Agent 自动排查日志错误"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "your-name" }]
+keywords = ["mcp", "log-analysis", "ai-agent", "ollama", "observability", "sre"]
+dependencies = [
+    "mcp>=1.2.0",
+    "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+log-analyze-mcp = "src.server:main"
+
+[tool.setuptools]
+packages = ["src", "src.tools", "src.llm"]

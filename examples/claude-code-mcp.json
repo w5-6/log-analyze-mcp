@@ -1,0 +1,10 @@
+{
+  "_comment": "Claude Code 项目级配置：复制为项目根目录下的 .mcp.json；或在 Claude Desktop 的 claude_desktop_config.json 中使用同样的 mcpServers 段。",
+  "mcpServers": {
+    "log-analyze": {
+      "command": "python",
+      "args": ["-u", "src/server.py"],
+      "cwd": "C:/Users/21476/Doubao/chats/2026-10-16/new-chat/log-analyze-mcp"
+    }
+  }
+}

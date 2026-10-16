@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "log-analyze": {
+      "command": "python",
+      "args": ["-u", "src/server.py"],
+      "cwd": "C:/Users/21476/Doubao/chats/2026-10-16/new-chat/log-analyze-mcp",
+      "env": {
+        "OLLAMA_BASE_URL": "http://localhost:11434",
+        "OLLAMA_MODEL": "qwen2.5:7b",
+        "OLLAMA_TIMEOUT": "120",
+        "MAX_LOG_LINES": "400"
+      }
+    }
+  }
+}
